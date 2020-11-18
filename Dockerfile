@@ -11,7 +11,7 @@ RUN apk update && apk add --no-cache wget bash
 #We can pass variables into the build process via --build-arg variables
 #We name them inside the Dockerfile using ARG, optionally setting a default value
 #ARG RELEASE=3.1
-ARG RELEASE=3.4.1
+ARG RELEASE=3.3
 
 #ENV vars are environment variables that get baked into the image
 #We can pass an ARG value into a final image by assigning it to an ENV variable
