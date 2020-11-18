@@ -21,10 +21,8 @@ ENV RELEASE=$RELEASE
 #https://vsupalov.com/docker-arg-vs-env/
  
 #Download a distribution archive file
-RUN wget --no-check-certificate https://github.com/OpenRefine/OpenRefine/releases/download/$RELEASE/openrefine-linux-$RELEASE.tar.gz
- 
 #Unpack the archive file and clear away the original download file
-RUN tar -xzf openrefine-linux-$RELEASE.tar.gz  && rm openrefine-linux-$RELEASE.tar.gz
+RUN wget --no-check-certificate https://github.com/OpenRefine/OpenRefine/releases/download/$RELEASE/openrefine-linux-$RELEASE.tar.gz && tar -xzf openrefine-linux-$RELEASE.tar.gz  && rm openrefine-linux-$RELEASE.tar.gz
  
 #Create an OpenRefine project directory
 RUN mkdir /mnt/refine
