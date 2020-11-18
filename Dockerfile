@@ -1,4 +1,4 @@
-FROM arm32v7/alpine
+FROM alpine:3.12
 
 #We need to install git so we can clone the OpenRefine repo
 RUN apk update && apk upgrade && apk add --no-cache git bash openjdk8
